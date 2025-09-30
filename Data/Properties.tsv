@@ -1,0 +1,17 @@
+id	name	description
+0	none	0
+1	Capture	When you attack with this weapon, you instead make a Physique Check contested by the target's Physical Save. Success: The target is Grappled by the weapon until it's freed. Forced movement doesn't end the Grapple, but teleportation does. Success(10): The target is also restrained until it's freed. A creature can spend 1 AP to make a DC10 Might Check. On a success, it can free itself or another creature within 1 space of it. Dealing 1 Slashing damage to the Weapon (AC 10) ends the effect and breaks the weapon, freeing the creature without harming it.
+2	Burst X	When you would make a ranged weapon attack with a weapon with this property, X amount of ammunition are used rather than one. 
+3	Concealable	In the first round of combat, you have ADV on Attacks you make against creatures using a concealed Weapon.
+4	Heavy	This weapon's damage is increased by 1 (already applied)
+5	Impact	You deal +1 damage on Heavy Hits.
+6	Loading (X)	You must spend X AP and have a free hand to reload the weapon. If X is more than 1, you must spend all of the AP at once. The weapon's damage is increased by 1 (already applied).
+7	Lucky	When you make an attack with this weapon the range for a Critical Hit is reduced by 1. (So if you have no other effects that do this you deal a Critical Hit on a natural 19)
+8	Range (X/Y)	You make ranged attack with this weapon. X is the Normal Range. Y is the Long Range.
+9	Reach	This weapon adds 1 space to your Melee Range when you attack with it.
+10	Silent	When you make a Ranged attack with the weapon while Hidden, you remain Unheared by creatures you're Hidden from.
+11	Strength (X)	The weapon's damage is increased by 1 (already applied). If your Might score is not greater than or equal to X, you do not gain the increased damage from this weapon property, and you have DIS on attacks with this weapon. 
+12	Thrown (X/Y)	You can use the weapon as a Melee or Ranged weapon with Range (X/Y)
+13	Two-Handed	The weapon requires 2 hands when you attack with it.
+14	Unwieldly	You have DIS on attacks made with the weapon against a target within of 1 Space of you
+15	Versatile	This weapon can be wielded with 1 or 2 hands. When you wield it with 2 hands, you gain +2 bonus to Hit using it. 

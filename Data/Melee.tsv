@@ -1,24 +1,24 @@
-id	name	dmg	dmg_type
-0	none	0	0
-1	Battleaxe	1	S
-2	Big Hammer	1	B/P
-3	Big Sword	2	S
-4	Club	1	B
-5	Flail	1	B
-6	Greataxe	2	S
-7	Hand Hammer	1	B
-8	Handaxe	1	S
-9	Knife	1	P
-10	Knuckle Duster	1	B
-11	Longsword	1	S
-12	Mace	1	B
-13	Machete	1	S
-14	Morningstar	1	B/P
-15	Net	0	B
-16	Shortsword	1	S/P
-17	Sledgehammer	3	B
-18	Spear	1	P
-19	Whip	1	S
-20	Natural Weapon	1	B/P/S
-21	Great Natural Weapon	2	B/P/S
-22	Greater Natural Weapon	3	B/P/S
+id	name	dmg	dmg_type	styles	properties
+0	none	0	0	0	0
+1	Battleaxe	1	S	Axe	Versatile, Impact
+2	Big Hammer	1	B/P	Hammer/Pick	Versatile, Impact
+3	Big Sword	2	S	Sword	Two-Handed, Heavy, Impact
+4	Club	1	B	Hammer	Concealable, Thrown (2/5)
+5	Flail	1	B	Chained	Versatile, Impact
+6	Greataxe	2	S	Axe	Two-Handed, Heavy, Impact
+7	Hand Hammer	1	B	Hammer	Impact, Thrown (2/5)
+8	Handaxe	1	S	Axe	Concealable, Thrown (5/10)
+9	Knife	1	P	Sword	Concealable, Thrown (5/10)
+10	Knuckle Duster	1	B	Fist	Concealable, Impact
+11	Longsword	1	S	Sword	Versatile
+12	Mace	1	B	Hammer	Versatile, Impact
+13	Machete	1	S	Axe/Sword	-
+14	Morningstar	1	B/P	Hammer/Pick	Versatile, Impact
+15	Net	0	B	Chained	Versatile, Capture, Thrown (2/5)
+16	Shortsword	1	S/P	Sword	Impact
+17	Sledgehammer	3	B	Hammer	Two-Handed, Heavy, Impact, Strength (3)
+18	Spear	1	P	Spear	Versatile, Thrown (2/5)
+19	Whip	1	S	Whip	Reach, Unwieldy
+20	Natural Weapon	1	B/P/S	-	-
+21	Great Natural Weapon	2	B/P/S	-	-
+22	Greater Natural Weapon	3	B/P/S	-	-

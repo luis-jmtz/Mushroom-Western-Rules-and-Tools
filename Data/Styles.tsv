@@ -1,0 +1,16 @@
+id	name	description
+0		0
+1	Axe	You deal +1 damage against creatures that are Bleeding.
+2	Bow	You deal +1 damage against creatures that are Slowed.
+3	Chained	Your attacks ignore Shields and 1/2 Cover. You also deal +1 damage against targets that are wielding a Shield or behind 1/2 Cover.
+4	Crossbow	You deal +1 damage against the last creature you attacked with the weapon since the start of your last turn.
+5	Fist	You deal +1 damage against creatures that are Grappled. Additionally, a Fist weapon is considered to be a free hand when Grappling. Unarmed Strikes count as Fist weapons.
+6	Hammer	You deal +1 damage against creatures that are Dazed or Petrified.
+7	Pick	You deal +1 damage against creatures that are Impaired.
+8	Spear	You deal +1 damage against a creature if you move 2 Spaces toward it before making the attack or if it is on a mount.
+9	Staff	You deal +1 damage against creatures that are Hindered.
+10	Sword	You deal +1 damage against creatures that are Exposed.
+11	Whip	You deal +1 damage with Melee Attacks against creatures that are further than 1 Space from you.
+12	Handgun	You do not received DIS from attacking within 5 ft of a hostile creature nor when attacking a Prone creature.
+13	Long-gun	You deal +1 damage to creatures that did not voluntarily move the last round.
+14	Shotgun	On a successful hit, you can choose to force the target to make a Brawn save equal to your save DC. On a failure, the target falls Prone. When attacking a creature outside of your Normal Range, the damage of your Attack is halved.

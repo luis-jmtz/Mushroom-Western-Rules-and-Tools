@@ -1,23 +1,23 @@
-id	name	dmg	dmg_type	range
-0	none	0	0	0
-1	Arc Rifle	2	L	[5/10]
-2	Double Barrel Shotgun	4	P	[4/10]
-3	E.Pistol	2	F	[5/15]
-4	E.Revolver	3	F	[5/15]
-5	E.Rifle	4	F	[15/30]
-6	Pistol	1	P	[5/15]
-7	Pistol - silenced	1	P	[5/10]
-8	Revolver	2	P	[5/15]
-9	Revolver Rifle	2	P	[15/30]
-10	Rifle	3	P	[15/30]
-11	Rifle - silenced	3	P	[15/30]
-12	Sawed-Off Shotgun	4	P	[2/4]
-13	Scrap E-Pistol	1	F	[3/7]
-14	Scrap Shotgun	2	P	[3/7]
-15	Shotgun	3	P	[4/10]
-16	Sniper Rifle	3	P	[25/50]
-17	Sniper Rifle - Silenced	3	P	[20/45]
-18	Tommy Gun	4	P	[4/10]
-19	Varmint Rifle	1	P	[15/30]
-20	Varmint Rifle - Silenced	1	P	[15/30]
-21	Zap Gun	1	L	[1/4]
+id	name	dmg	dmg_type	range	ammo	styles	properties
+0	none	0	0	0	0	0	0
+1	Arc Rifle	2	L	[5/10]	Lc	Long-gun	Two-Handed
+2	Double Barrel Shotgun	4	P	[4/10]	Ss	Shotgun	Burst 2, Reload, Two-Handed
+3	E.Pistol	2	F	[5/15]	Sc	Handgun	
+4	E.Revolver	3	F	[5/15]	Lc	Handgun	Lucky
+5	E.Rifle	4	F	[15/30]	Lc	Long-gun	Two-Handed
+6	Pistol	1	P	[5/15]	Pi	Handgun	
+7	Pistol - silenced	1	P	[5/10]	Pi	Handgun	Silent
+8	Revolver	2	P	[5/15]	Re	Handgun	Lucky
+9	Revolver Rifle	2	P	[15/30]	Re	Long-gun	Two-Handed, Lucky
+10	Rifle	3	P	[15/30]	Ri	Long-gun	Two-Handed
+11	Rifle - silenced	3	P	[15/30]	Ri	Long-gun	Two-Handed, Silent
+12	Sawed-Off Shotgun	4	P	[2/4]	Ss	Handgun/Shotgun	Burst 2, Reload
+13	Scrap E-Pistol	1	F	[3/7]	Sc	Handgun	
+14	Scrap Shotgun	2	P	[3/7]	Ss	Long-gun	Reload, Two-Handed
+15	Shotgun	3	P	[4/10]	Ss	Shotgun,Long-gun	Two-Handed
+16	Sniper Rifle	3	P	[25/50]	Ri	Long-gun	Two-Handed
+17	Sniper Rifle - Silenced	3	P	[20/45]	Ri	Long-gun	Two-Handed, Silent
+18	Tommy Gun	4	P	[4/10]	Pi	Long-gun	Two-Handed, Burst 4
+19	Varmint Rifle	1	P	[15/30]	Pi	Long-gun	Two-Handed
+20	Varmint Rifle - Silenced	1	P	[15/30]	Pi	Long-gun	Two-Handed
+21	Zap Gun	1	L	[1/4]	Sc	Handgun	-
