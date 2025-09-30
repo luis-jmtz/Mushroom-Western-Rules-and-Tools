@@ -1,0 +1,12 @@
+id	type	name	AC	DRd	brawn_requirement	max_reflex_bonus	reflex_check_DIS	speed_reduction	cost
+0	0	none	0	0	0	0	0	0	0
+1	1	Gambeson	1	0	0	0	0	0	5
+2	1	Leather	2	0	0	0	0	0	10
+3	1	Studded Leather	3	0	0	-2	0	0	15
+4	1	Chain mail	3	0	0	0	0	0	20
+5	1	Brigandine	4	0	0	-2	0	0	30
+6	2	Scale mail	1	1	0	0	1	0	45
+7	2	Half plate	2	1	0	0	1	0	70
+8	2	Half plate and Chain	2	2	1	0	1	-1	100
+9	2	Full plate	3	1	1	0	1	0	150
+10	2	Steel plate	4	2	2	-2	1	-1	250

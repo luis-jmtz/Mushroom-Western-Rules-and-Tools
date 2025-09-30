@@ -1,0 +1,24 @@
+id	name	dmg	dmg_type
+0	none	0	0
+1	Battleaxe	1	S
+2	Big Hammer	1	B/P
+3	Big Sword	2	S
+4	Club	1	B
+5	Flail	1	B
+6	Greataxe	2	S
+7	Hand Hammer	1	B
+8	Handaxe	1	S
+9	Knife	1	P
+10	Knuckle Duster	1	B
+11	Longsword	1	S
+12	Mace	1	B
+13	Machete	1	S
+14	Morningstar	1	B/P
+15	Net	0	B
+16	Shortsword	1	S/P
+17	Sledgehammer	3	B
+18	Spear	1	P
+19	Whip	1	S
+20	Natural Weapon	1	B/P/S
+21	Great Natural Weapon	2	B/P/S
+22	Greater Natural Weapon	3	B/P/S

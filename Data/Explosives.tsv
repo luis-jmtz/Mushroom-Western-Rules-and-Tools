@@ -1,0 +1,9 @@
+id	name	cost	dmg	dmg_type	radius	range
+0	-	0	0	-	0	0
+1	Dynamite Stick	15	3	Sonic	1	5
+2	Dynamite Bundle	40	6	Sonic	3	4
+3	Molotov Cocktail	5	2	Fire	1	4
+4	Frag	30	3	Piercing	2	5
+5	Flechette Grenade	30	3	Slashing	2	5
+6	Toxin Flask	30	3	Poison	1	4
+7	Cryo Grenade	100	5	Cold	1	4
