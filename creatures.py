@@ -30,3 +30,16 @@ class Creature:
         self.save_dc = 0
         self.luck = 0
         self.speed = 0
+
+
+    def add_armor(self):
+        pass
+
+    def add_shield(self):
+        pass
+
+    def add_weapon(self):
+        pass
+
+    def add_explosives(self):
+        pass
