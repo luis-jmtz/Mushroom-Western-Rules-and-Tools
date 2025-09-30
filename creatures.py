@@ -24,12 +24,20 @@ class Creature:
         self.focus_points = 0
         self.isMartial = 0 
 
-        #equipment
+        # equipment  
+        self.armor = None
+        self.shield = None
+        self.weapons = []
+        self.explosives = []
+        
+        # combat stats
         self.ac = 0
         self.attack_bonus = 0
         self.save_dc = 0
         self.luck = 0
         self.speed = 0
+
+        
 
 
     def add_armor(self):
