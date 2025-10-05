@@ -39,8 +39,8 @@ class Weapon:
         weapon_choice = chosen_type[chosen_type["id"] == self.weapon_id].iloc[0] # returns a series with the values
 
         self.name = weapon_choice.get("name")
-        self.damage = weapon_choice.get("dmg")
-        self.damage_type = weapon_choice.get("dmg_type")
+        self.dmg = weapon_choice.get("dmg")
+        self.dmg_type = weapon_choice.get("dmg_type")
 
         if self.weapon_type != 0:
             self.range = weapon_choice.get("range")
