@@ -69,6 +69,9 @@ class Creature:
         return shield
 
     def calc_ac(self, armor_id, shield_id):
+         
+        self.calc_bonuses() # calculate current bonuses before doing add. calculations
+        
         # load equipment
         self.armor = self.add_armor(armor_id)
         self.shield = self.add_shield(shield_id)
@@ -113,6 +116,7 @@ class Creature:
         Next we will assume that combat lasts for 5 rounds, so we'll calculate the average damage per round
         with that in mind.
         '''
+        self.calc_bonuses() # calculate current bonuses before doing add. calculations
 
         heavy_hit_bonus = 0 # bonus damage from a heavy or brutal hit
 
