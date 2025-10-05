@@ -4,17 +4,13 @@ from equipment import *
 from creatures import *
 import pprint
 
-temp = Creature()
+bandit = Creature()
 
-temp.size = -1
+bandit.brawn = 3
+bandit.reflex = 1
+bandit.brains = -2
+bandit.mettle = 0
 
-temp.calc_bonuses()
-
-temp.add_weapon(0,0)
-
-print(temp.weapons[0].name)
-print(temp.weapons[0].dmg)
-temp.size = -1
-temp.calc_bonuses()
-print(temp.speed)
-
+bandit.add_armor(1)
+bandit.add_weapon(2,6)
+bandit.add_weapon(0,9)
