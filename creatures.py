@@ -1,5 +1,6 @@
 import pandas as pd
 import math
+from equipment import *
 
 class Creature:
 
@@ -13,6 +14,8 @@ class Creature:
         self.reflex = 0
         self.brains = 0
         self.mettle = 0
+        self.prime = 0
+
 
         #physical properties
         self.size = 0
@@ -37,14 +40,41 @@ class Creature:
         self.luck = 0
         self.speed = 0
 
+
+    def calc_prime(self):
+        self.prime = max([self.brawn, self.reflex, self.brains, self.mettle])
+
+
+
+# ----------------- Add AC values ------------------------------- #
+
+    def add_armor(self, id):
+        armor = Armor(id)
+        return armor
+
+    def add_shield(self, id):
+        shield = Shield(id)
+        return shield
+
+    def calc_ac(self, armor_id, shield_id):
+        # load equipment
+        self.armor = self.add_armor(armor_id)
+        self.shield = self.add_shield(shield_id)
+
+        # 8 + Combat Proficiency + Agility + Armor Bonus + Shield Bonus
+
+        # Calculate the max reflex bonus
         
+        max_reflex = self.prime + self.armor.max_reflex_bonus
+
+        if max_reflex < self.reflex:
+            self.reflex = max_reflex
+
+        self.ac = 8 + self.combat_prof + self.reflex + self.armor.ac + self.shield.ac
+        self.calc_prime()
 
 
-    def add_armor(self):
-        pass
 
-    def add_shield(self):
-        pass
 
     def add_weapon(self):
         pass
