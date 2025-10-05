@@ -15,17 +15,17 @@ class Creature:
         self.brains = 0
         self.mettle = 0
         self.prime = 0
+        self.calc_prime()
 
 
         #physical properties
-        self.size = 0
+        self.size = 0 # 0 = medium (standard), 1 = large, 2 = huge, -1 = small
         self.base_speed = 0
         self.canFly = False
         self.canBurrow = False
         self.ap = 2 #min 2 AP
-        self.num_attacks = 0 # number of normal attacks
+        self.num_attacks = 1 # number of normal attacks
         self.focus_points = 0
-        self.isMartial = 0 
 
         # equipment  
         self.armor = None
@@ -41,8 +41,19 @@ class Creature:
         self.speed = 0
 
 
+
     def calc_prime(self):
         self.prime = max([self.brawn, self.reflex, self.brains, self.mettle])
+
+    def calc_bonuses(self):
+        self.calc_prime()
+
+        self.attack_bonus = self.prime + self.combat_prof
+        self.save_dc = 10 + self.attack_bonus
+
+        # Luck represents Health: 6 + Character Level + Might + size
+        self.luck = 6 + self.level + self.brawn + self.size
+        
 
 
 

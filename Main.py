@@ -7,12 +7,14 @@ import pprint
 
 test = Creature()
 test.reflex = 2
-test.calc_prime()
+test.calc_bonuses()
 
-test.calc_ac(1, 0)
+print(test.prime)
+print(test.luck)
 
-print(test.ac)
+test.size = -1
+test.calc_bonuses()
 
-test.calc_ac(0,0)
 
-print(test.ac)
+print(test.attack_bonus)
+print(test.save_dc)
