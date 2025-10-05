@@ -14,8 +14,20 @@ weapons_df = [melee, projectile,firearms]
 
 
 class Armor:
-    def __init__(self):
-        self.armor_id = 0
+    def __init__(self, id):
+        self.armor_id = id
+
+        armor_values = armor[armor["id"] == self.armor_id].iloc[0]
+
+        self.type =  armor_values.get("type")
+        self.name =  armor_values.get("name")
+        self.ac = armor_values.get("AC")
+        self.damage_reduction = armor_values.get("DRd")
+        self.max_reflex_bonus = armor_values.get("max_reflex_bonus")
+        self.reflex_check_dis = armor_values.get("reflex_check_DIS")
+        self.speed_reduction =  armor_values.get("speed_reduction")
+
+
 
 class Weapon:
     def __init__(self, type, id):
@@ -39,14 +51,6 @@ class Weapon:
             self.ammo = weapon_choice.get("ammo")
         else:
             self.ammo = 0
-
-        
-
-
-
-
-
-
 
 
 
