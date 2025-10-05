@@ -91,7 +91,10 @@ class Creature:
 
     def add_weapon(self, type_id, weapon_id):
         weapon = Weapon(type_id, weapon_id)
-        
+
+        if self.size != 0 & type_id == 0:
+            weapon.dmg += self.size
+
         self.weapons.append(weapon)
 
     def add_explosives(self, id, count):
