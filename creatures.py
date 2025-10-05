@@ -57,7 +57,7 @@ class Creature:
 
 
 
-# ----------------- Add AC values ------------------------------- #
+    # ----------------- Add AC values ------------------------------- #
 
     def add_armor(self, id):
         armor = Armor(id)
@@ -86,7 +86,7 @@ class Creature:
 
 
 
-# ------------------ Add Offensive Tools -------------- #
+    # ------------------ Add Offensive Tools -------------- #
 
 
     def add_weapon(self, type_id, weapon_id):
@@ -141,6 +141,8 @@ class Creature:
             explosives_damage = curr_dmg_bonus
 
         
+        damage_per_round = ((max_weapon_damage * self.num_attacks) + explosives_damage) / 5
 
+        self.dpr = damage_per_round
 
-
+        
