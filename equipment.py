@@ -17,7 +17,7 @@ class Armor:
     def __init__(self, id):
         self.armor_id = id
 
-        armor_values = armor[armor["id"] == self.armor_id].iloc[0]
+        armor_values = armor[armor["id"] == self.armor_id].iloc[0] # returns a series with the values
 
         self.type =  armor_values.get("type")
         self.name =  armor_values.get("name")
@@ -36,7 +36,7 @@ class Weapon:
         self.weapon_id = id
         chosen_type = weapons_df[self.weapon_type]
 
-        weapon_choice = chosen_type[chosen_type["id"] == self.weapon_id].iloc[0]
+        weapon_choice = chosen_type[chosen_type["id"] == self.weapon_id].iloc[0] # returns a series with the values
 
         self.name = weapon_choice.get("name")
         self.damage = weapon_choice.get("dmg")
@@ -56,8 +56,17 @@ class Weapon:
 
 
 class Shield:
-    def __init__(self):
-        self.shield_id = 0
+    def __init__(self,id):
+        self.shield_id = id
+        
+        shield_values= shields[shields["id"] == self.shield_id].iloc[0] # returns a series with the values
+
+        self.type = shield_values.get("type")
+        self.name = str(shield_values.get("name")) + " shield"
+        self.ac = shield_values.get("ac")
+        self.material = shield_values.get("material")
+        self.hp = shield_values.get("hp")
+
 
 class Explosives:
     def __init__(self):
