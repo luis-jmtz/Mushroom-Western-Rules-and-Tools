@@ -94,6 +94,10 @@ class Creature:
         
         self.weapons.append(weapon)
 
-    def add_explosives(self):
-        pass
+    def add_explosives(self, id, count):
+        explosive = Explosives(id)
+
+        new_entry = (explosive, count) # tuple that contains the item info, and the number of the item
+
+        self.explosives.append(new_entry)
 
