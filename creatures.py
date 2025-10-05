@@ -101,3 +101,46 @@ class Creature:
 
         self.explosives.append(new_entry)
 
+
+    
+    def calc_dpr(self):
+        '''Calculate the Damage per Round
+        We will assume that the target has an AC of 10 and that the creature always lands hits the target by rolling a 10
+        Next we will assume that combat lasts for 5 rounds, so we'll calculate the average damage per round
+        with that in mind.
+        '''
+
+        heavy_hit_bonus = 0 # bonus damage from a heavy or brutal hit
+
+        # checks if the creature can consistenly hit a higher degree of success on an attack
+        if self.attack_bonus > 4:
+            if 4 < self.attack_bonus < 10:
+                heavy_hit_bonus = 1
+            
+            elif self.attack_bonus >= 10:
+                heavy_hit_bonus = 2
+
+        
+        # calculates weapon damage per hit
+        damage_list = []
+        for weapon in self.weapons:
+            damage_list.append(weapon.dmg)
+
+        max_weapon_damage = max(damage_list) + heavy_hit_bonus
+
+
+        # calculates damage from explosives
+        explosives_damage = 0
+
+        if len(self.explosives) > 0:
+            curr_dmg_bonus = 0
+
+            for y in self.explosives:
+                curr_dmg_bonus += y[0].dmg *y[0].radius * y[1]
+
+            explosives_damage = curr_dmg_bonus
+
+        
+
+
+
