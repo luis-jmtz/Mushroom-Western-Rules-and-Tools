@@ -18,10 +18,24 @@ class Armor:
         self.armor_id = 0
 
 class Weapon:
-    def __init__(self):
-        self.weapon_type = 0
+    def __init__(self, type, id):
+        self.weapon_type = type
         #melee, projectile, firearms
-        self.weapon_id = 0
+        self.weapon_id = id
+        chosen_type = weapons_df[self.weapon_type]
+
+        weapon_choice = chosen_type[chosen_type["id"] == self.weapon_id].iloc[0]
+
+        self.damage = weapon_choice.get("dmg")
+
+
+
+
+
+
+
+
+
 
 class Shield:
     def __init__(self):
