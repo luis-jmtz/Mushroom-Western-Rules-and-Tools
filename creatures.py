@@ -20,7 +20,7 @@ class Creature:
 
         #physical properties
         self.size = 0 # 0 = medium (standard), 1 = large, 2 = huge, -1 = small
-        self.base_speed = 0
+        self.base_speed = 6 + self.size # base speed is 60 spaces / 30ft. Size adds or subtracts to the base speed
         self.canFly = False
         self.canBurrow = False
         self.ap = 2 #min 2 AP
