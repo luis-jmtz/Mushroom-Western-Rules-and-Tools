@@ -9,12 +9,28 @@ test = Creature()
 test.reflex = 2
 test.calc_bonuses()
 
-print(test.prime)
-print(test.luck)
+test.add_weapon(2,3)
 
-test.size = -1
-test.calc_bonuses()
+print(test.weapons)
+print(test.weapons[0].name)
+
+test.add_weapon(0,5)
+
+print(test.weapons)
+print(test.weapons[1].name)
 
 
-print(test.attack_bonus)
-print(test.save_dc)
+test.add_weapon(1,5)
+
+print(test.weapons)
+print(test.weapons[2].name)
+
+# print(test.prime)
+# print(test.luck)
+
+# test.size = -1
+# test.calc_bonuses()
+
+
+# print(test.attack_bonus)
+# print(test.save_dc)

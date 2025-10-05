@@ -86,9 +86,14 @@ class Creature:
 
 
 
+# ------------------ Add Offensive Tools -------------- #
 
-    def add_weapon(self):
-        pass
+
+    def add_weapon(self, type_id, weapon_id):
+        weapon = Weapon(type_id, weapon_id)
+        
+        self.weapons.append(weapon)
 
     def add_explosives(self):
         pass
+
