@@ -3,7 +3,7 @@ import numpy as np
 from equipment import *
 import pprint
 
-temp = Shield(1)
+temp = Explosives(1)
 
 # print(temp.name)
 

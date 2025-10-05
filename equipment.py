@@ -69,5 +69,13 @@ class Shield:
 
 
 class Explosives:
-    def __init__(self):
-        self.explosive_id = 0
+    def __init__(self, id):
+        self.explosive_id = id
+
+        explo_values = explosives[explosives["id"]== self.explosive_id].iloc[0]
+
+        self.name = explo_values.get("name")
+        self.dmg = explo_values.get("dmg")
+        self.dmg_type = explo_values.get("dmg_type")
+        self.radius = explo_values.get("radius")
+        self.range = explo_values.get("range")
