@@ -26,7 +26,21 @@ class Weapon:
 
         weapon_choice = chosen_type[chosen_type["id"] == self.weapon_id].iloc[0]
 
+        self.name = weapon_choice.get("name")
         self.damage = weapon_choice.get("dmg")
+        self.damage_type = weapon_choice.get("dmg_type")
+
+        if self.weapon_type != 0:
+            self.range = weapon_choice.get("range")
+        else:
+            self.range = 0
+
+        if self.weapon_type == 2:
+            self.ammo = weapon_choice.get("ammo")
+        else:
+            self.ammo = 0
+
+        
 
 
 
