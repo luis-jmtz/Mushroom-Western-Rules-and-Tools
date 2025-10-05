@@ -20,7 +20,7 @@ class Creature:
 
         #physical properties
         self.size = 0 # 0 = medium (standard), 1 = large, 2 = huge, -1 = small
-        self.base_speed = 6 + self.size # base speed is 60 spaces / 30ft. Size adds or subtracts to the base speed
+        self.base_speed = 6 # base speed for medium creatures = 30 ft
         self.canFly = False
         self.canBurrow = False
         self.ap = 2 #min 2 AP
@@ -38,7 +38,7 @@ class Creature:
         self.attack_bonus = 0
         self.save_dc = 0
         self.luck = 0
-        self.speed = 0
+        self.speed = self.base_speed
 
 
 
@@ -53,6 +53,7 @@ class Creature:
 
         # Luck represents Health: 6 + Character Level + Might + size
         self.luck = 6 + self.level + self.brawn + self.size
+        self.speed = self.base_speed + self.size
         
 
 
@@ -148,4 +149,57 @@ class Creature:
 
         self.dpr = damage_per_round
 
+    
+    
+    def calculate_difficulty(self):
+        """Calculate creature difficulty level based on core combat stats"""
+        self.calc_bonuses() # calculate bonuses first
         
+        # Calculate total attribute value
+        total_attributes = self.brawn + self.reflex + self.brains + self.mettle
+        
+        # Base difficulty from level
+        base_difficulty = self.level
+        
+        # Offensive difficulty component
+        offensive_score = 0
+        
+        self.calc_dpr()
+        
+        # Scale DPR contribution
+        offensive_score += self.dpr * 0.5
+        
+        # Bonus for focus points (resource management)
+        offensive_score += self.focus_points * 0.5
+        
+        # Defensive difficulty component
+        defensive_score = 0
+        
+        self.calc_ac()
+
+        # AC contribution (base AC is 8 in your system)
+        defensive_score += (self.ac - 8) * 0.5
+        
+        # Luck (HP) contribution (base HP is 6 in your system)
+        defensive_score += (self.luck - 6) * 0.1
+        
+        # Damage reduction from armor
+        if self.armor and hasattr(self.armor, 'damage_reduction'):
+            defensive_score += self.armor.damage_reduction * 2
+        
+        # Action economy
+        action_score = (self.ap - 2) * 1.5  # Base 2 AP as reference
+        
+        # Combine all components
+        total_difficulty = (
+            base_difficulty +
+            offensive_score +
+            defensive_score +
+            action_score +
+            (total_attributes * 0.2)
+        )
+        
+        # Ensure minimum difficulty
+        total_difficulty = max(1, total_difficulty)
+        
+        return round(total_difficulty)
