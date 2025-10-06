@@ -62,31 +62,33 @@ class Creature:
 
     def add_armor(self, id):
         armor = Armor(id)
-        return armor
+        self.armor = armor
 
     def add_shield(self, id):
         shield = Shield(id)
-        return shield
+        self.shield = shield
 
-    def calc_ac(self, armor_id, shield_id):
+    def calc_ac(self):
          
         self.calc_bonuses() # calculate current bonuses before doing add. calculations
         
-        # load equipment
-        self.armor = self.add_armor(armor_id)
-        self.shield = self.add_shield(shield_id)
+        equipment_ac = 0 # AC from shields and armor
 
-        # 8 + Combat Proficiency + Agility + Armor Bonus + Shield Bonus
+        if self.armor != None:
+            equipment_ac += self.armor.ac
 
-        # Calculate the max reflex bonus
-        
-        max_reflex = self.prime + self.armor.max_reflex_bonus
+            max_reflex = self.prime + self.armor.max_reflex_bonus
 
-        if max_reflex < self.reflex:
-            self.reflex = max_reflex
+            if max_reflex < self.reflex:
+                self.reflex = max_reflex
 
-        self.ac = 8 + self.combat_prof + self.reflex + self.armor.ac + self.shield.ac
-        self.calc_prime()
+        if self.shield != None:
+            equipment_ac += self.shield.ac
+
+
+        # 8 + Combat Proficiency + Agility + Armor Bonus + Shield Bonus        
+
+        self.ac = 8 + self.combat_prof + self.reflex + equipment_ac
 
 
 
@@ -131,10 +133,14 @@ class Creature:
         
         # calculates weapon damage per hit
         damage_list = []
-        for weapon in self.weapons:
-            damage_list.append(weapon.dmg)
+        max_weapon_damage = 0
+        
+        if len(self.weapons) >0:
+            for weapon in self.weapons:
+                damage_list.append(weapon.dmg)
 
-        max_weapon_damage = max(damage_list) + heavy_hit_bonus
+            max_weapon_damage = max(damage_list) + heavy_hit_bonus
+
 
 
         # calculates damage from explosives
@@ -181,10 +187,10 @@ class Creature:
         
         self.calc_ac()
 
-        # AC contribution (base AC is 8 in your system)
+        # AC contribution: Base AC is 8
         defensive_score += (self.ac - 8) * 0.5
         
-        # Luck (HP) contribution (base HP is 6 in your system)
+        # Luck (HP) contribution: base Luck is 6
         defensive_score += (self.luck - 6) * 0.1
         
         # Damage reduction from armor
