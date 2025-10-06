@@ -3,6 +3,7 @@ import numpy as np
 from equipment import *
 from creatures import *
 import pprint
+import streamlit as st
 
 bandit = Creature()
 
