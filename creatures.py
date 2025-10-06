@@ -178,6 +178,7 @@ class Creature:
         
         # Scale DPR contribution
         offensive_score += self.dpr * 0.5
+        print(f"Offenseive Score: {offensive_score}")
         
         # Bonus for focus points (resource management)
         offensive_score += self.focus_points * 0.5
@@ -196,9 +197,15 @@ class Creature:
         # Damage reduction from armor
         if self.armor and hasattr(self.armor, 'damage_reduction'):
             defensive_score += self.armor.damage_reduction * 2
+
+        print(f"Defensive Score: {defensive_score}")
         
         # Action economy
         action_score = (self.ap - 2) * 1.5  # Base 2 AP as reference
+
+        print(f"Action Score: {action_score}")
+
+        print(f"Attribute Contribution: {total_attributes * 0.2}")
         
         # Combine all components
         total_difficulty = (

@@ -14,4 +14,10 @@ bandit.mettle = 0
 bandit.add_armor(1)
 bandit.add_weapon(2,6)
 bandit.add_weapon(0,9)
-bandit.add_shield(1)
+
+bandit.calc_dpr()
+print(f"DPR: {bandit.dpr}")
+
+diff = bandit.calculate_difficulty()
+
+print(diff)
