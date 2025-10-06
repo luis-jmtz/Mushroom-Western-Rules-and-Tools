@@ -1,0 +1,17 @@
+{
+	"cSpell.words": [
+		"descript",
+		"geno",
+		"selectbox"
+	],
+
+    "files.associations": {
+        "*.tsv": "tsv"
+    },
+    "[tsv]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 1,
+        "editor.detectIndentation": false
+    }
+	
+}

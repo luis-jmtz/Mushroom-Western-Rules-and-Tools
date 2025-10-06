@@ -1,0 +1,10 @@
+id: id (int)
+name: name (str)
+description: desription (str)
+type: type of ability (int)
+- 0: utility - movement, cc, non-damaging conditions
+- 1: offensive - abilites that deal direct damage
+- 2: defensive
+points: the amount the ability contributes to the difficulty_level (float)
+- for the offensive abilities, need to do a mini_dpr calculation
+- will probably need to create a function to add up all the values to add them to the 
