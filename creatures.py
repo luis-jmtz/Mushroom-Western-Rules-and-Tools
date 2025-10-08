@@ -163,7 +163,17 @@ class Creature:
 
         self.dpr = damage_per_round
 
+    # --------------------------- Add Abilities -------------------------- #
 
+    def add_ability(self, id):
+        ability = Ability(id)
+
+        name = ability.name
+        score = ability.points
+
+        new_entry = (name,score)
+
+        self.abilties.append(new_entry)
 
 
     # ----------------------- Calculate Difficulty ---------------------- #

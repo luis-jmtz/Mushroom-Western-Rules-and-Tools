@@ -3,7 +3,7 @@ import pandas as pd
 # load data
 abilities = pd.read_csv(r"Data\Creature_abilities.tsv", sep="\t")
 
-class Abilities:
+class Ability:
     def __init__(self,id):
         self.ability_id = id
 
