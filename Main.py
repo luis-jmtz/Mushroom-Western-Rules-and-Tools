@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from equipment import *
 from creatures import *
+from abilities import *
+
 import pprint
 import streamlit as st
 

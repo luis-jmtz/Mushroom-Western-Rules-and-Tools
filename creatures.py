@@ -1,6 +1,8 @@
 import pandas as pd
 import math
 from equipment import *
+from abilities import *
+
 
 class Creature:
 
@@ -39,6 +41,7 @@ class Creature:
         self.save_dc = 0
         self.luck = 0
         self.speed = self.base_speed
+        self.abilties = []
 
 
 
@@ -58,7 +61,7 @@ class Creature:
 
 
 
-    # ----------------- Add AC values ------------------------------- #
+    # ------------------------------- Add AC values ------------------------------- #
 
     def add_armor(self, id):
         armor = Armor(id)
@@ -92,7 +95,7 @@ class Creature:
 
 
 
-    # ------------------ Add Offensive Tools -------------- #
+    # --------------------------------- Add Offensive Tools ------------------------ #
 
 
     def add_weapon(self, type_id, weapon_id):
@@ -106,7 +109,8 @@ class Creature:
     def add_explosives(self, id, count):
         explosive = Explosives(id)
 
-        new_entry = (explosive, count) # tuple that contains the item info, and the number of the item
+        new_entry = (explosive, count) 
+        # tuple that contains the item info, and the number of the item
 
         self.explosives.append(new_entry)
 
@@ -159,8 +163,11 @@ class Creature:
 
         self.dpr = damage_per_round
 
-    
-    
+
+
+
+    # ----------------------- Calculate Difficulty ---------------------- #
+
     def calculate_difficulty(self):
         """Calculate creature difficulty level based on core combat stats"""
         self.calc_bonuses() # calculate bonuses first
