@@ -8,3 +8,5 @@ type: type of ability (int)
 points: the amount the ability contributes to the difficulty_level (float)
 - for the offensive abilities, need to do a mini_dpr calculation
 - will probably need to create a function to add up all the values to add them to the 
+
+---
