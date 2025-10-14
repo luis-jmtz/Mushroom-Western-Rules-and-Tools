@@ -237,6 +237,6 @@ class Creature:
         )
         
         # Ensure minimum difficulty
-        total_difficulty = max(1, total_difficulty)
+        # total_difficulty = max(1, total_difficulty)
         
-        return round(total_difficulty)
+        return total_difficulty

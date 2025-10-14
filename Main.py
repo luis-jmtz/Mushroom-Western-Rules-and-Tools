@@ -29,6 +29,7 @@ print(diff)
 
 print(bandit.abilties[0].name)
 
+bandit.add_ability(1)
 
 diff = bandit.calculate_difficulty()
 
