@@ -11,3 +11,5 @@ points: the amount the ability contributes to the difficulty_level (float)
 
 ---
 Might need to multiply offesive points by number of attacks
+
+TL/DR: Advantage and disadvantage are usually the same as a modifier of about +/- 4.5 on your roll.
