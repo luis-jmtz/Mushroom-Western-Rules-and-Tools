@@ -168,12 +168,12 @@ class Creature:
     def add_ability(self, id):
         ability = Ability(id)
 
-        name = ability.name
-        score = ability.points
+        # name = ability.name
+        # score = ability.points
 
-        new_entry = (name,score)
+        # new_entry = (name,score)
 
-        self.abilties.append(new_entry)
+        self.abilties.append(ability)
 
 
     # ----------------------- Calculate Difficulty ---------------------- #
@@ -220,15 +220,18 @@ class Creature:
         # Action economy
         action_score = (self.ap - 2) * 1.5  # Base 2 AP as reference
 
-        # print(f"Action Score: {action_score}")
-
-        # print(f"Attribute Contribution: {total_attributes * 0.2}")
+        ability_score = 0
+        if len(self.abilties) != 0:
+            for ability in self.abilties:
+                points = ability.points
+                ability_score += points
         
         # Combine all components
         total_difficulty = (
             base_difficulty +
             offensive_score +
             defensive_score +
+            ability_score +
             action_score +
             (total_attributes * 0.2)
         )

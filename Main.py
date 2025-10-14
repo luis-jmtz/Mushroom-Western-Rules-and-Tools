@@ -21,6 +21,15 @@ bandit.add_weapon(0,9)
 bandit.calc_dpr()
 print(f"DPR: {bandit.dpr}")
 
+bandit.add_ability(1)
+
+diff = bandit.calculate_difficulty()
+
+print(diff)
+
+print(bandit.abilties[0].name)
+
+
 diff = bandit.calculate_difficulty()
 
 print(diff)
