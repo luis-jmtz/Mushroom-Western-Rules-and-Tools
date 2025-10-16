@@ -163,55 +163,83 @@ with st.form("creature_form"):
         creature.calc_dpr()
         difficulty = creature.calculate_difficulty()
         
-        # Display creature summary
-        st.subheader("Creature Summary")
-        summary_col1, summary_col2 = st.columns(2)
+        # Generate formatted markdown output
+        markdown_output = f"""## {creature_name}
+
+**Level**: {creature.level}  
+**Size**: {size}  
+**Speed**: {creature.speed}  
+**Flight**: {'Yes' if creature.canFly else 'No'}  
+**Burrow**: {'Yes' if creature.canBurrow else 'No'}  
+
+### Attributes
+**Brawn**: {creature.brawn}  
+**Reflex**: {creature.reflex}  
+**Brains**: {creature.brains}  
+**Mettle**: {creature.mettle}  
+**Prime Attribute**: {creature.prime}  
+
+### Combat Stats
+**AC**: {creature.ac}  
+**Luck (HP)**: {creature.luck}  
+**Attack Bonus**: +{creature.attack_bonus}  
+**Save DC**: {creature.save_dc}  
+**DPR**: {creature.dpr:.2f}  
+**Difficulty**: {difficulty:.2f}  
+
+### Action Economy
+**AP**: {creature.ap}  
+**Number of Attacks**: {creature.num_attacks}  
+**Focus Points**: {creature.focus_points}  
+
+### Equipment
+"""
         
-        with summary_col1:
-            st.write(f"Level: {creature.level}")
-            st.write(f"Size: {size}")
-            st.write(f"Speed: {creature.speed}")
-            if creature.canFly:
-                st.write("Can Fly: Yes")
-            if creature.canBurrow:
-                st.write("Can Burrow: Yes")
+        # Add armor info
+        if creature.armor:
+            markdown_output += f"**Armor**: {creature.armor.name} (AC: {creature.armor.ac}, DR: {creature.armor.damage_reduction})\n\n"
+        else:
+            markdown_output += "**Armor**: None\n\n"
             
-            st.write(f"AP: {creature.ap}")
-            st.write(f"Number of Attacks: {creature.num_attacks}")
-            st.write(f"FP: {creature.focus_points}")
-        
-        with summary_col2:
-            st.write(f"AC: {creature.ac}")
-            st.write(f"Luck (HP): {creature.luck}")
-            st.write(f"Attack Bonus: +{creature.attack_bonus}")
-            st.write(f"Save DC: {creature.save_dc}")
-            st.write(f"DPR: {creature.dpr:.2f}")
-            st.write(f"Difficulty: {difficulty:.2f}")
-        
-        # Equipment and Abilities
-        col4, col5 = st.columns(2)
-        
-        with col4:
-            st.subheader("Equipment")
-            if creature.armor:
-                st.write(f"Armor: {creature.armor.name}")
-            if creature.shield:
-                st.write(f"Shield: {creature.shield.name}")
+        # Add shield info
+        if creature.shield:
+            markdown_output += f"**Shield**: {creature.shield.name} (AC: {creature.shield.ac})\n\n"
+        else:
+            markdown_output += "**Shield**: None\n\n"
             
-            if creature.weapons:
-                st.write("Weapons:")
-                for weapon in creature.weapons:
-                    st.write(f"- {weapon.name} (Dmg: {weapon.dmg})")
+        # Add weapons info
+        if creature.weapons:
+            markdown_output += "**Weapons**:\n"
+            for weapon in creature.weapons:
+                weapon_type_name = ["Melee", "Projectile", "Firearms"][weapon.weapon_type]
+                markdown_output += f"- {weapon.name} ({weapon_type_name}): {weapon.dmg} {weapon.dmg_type} damage"
+                if hasattr(weapon, 'range') and weapon.range:
+                    markdown_output += f", Range: {weapon.range}"
+                if hasattr(weapon, 'ammo') and weapon.ammo:
+                    markdown_output += f", Ammo: {weapon.ammo}"
+                markdown_output += "\n"
+            markdown_output += "\n"
+        else:
+            markdown_output += "**Weapons**: None\n\n"
             
-            if creature.explosives:
-                st.write("Explosives:")
-                for explosive, count in creature.explosives:
-                    st.write(f"- {explosive.name} x{count} (Dmg: {explosive.dmg}, Radius: {explosive.radius})")
+        # Add explosives info
+        if creature.explosives:
+            markdown_output += "**Explosives**:\n"
+            for explosive, count in creature.explosives:
+                markdown_output += f"- {explosive.name} x{count}: {explosive.dmg} {explosive.dmg_type} damage, Radius: {explosive.radius}, Range: {explosive.range}\n"
+            markdown_output += "\n"
+        else:
+            markdown_output += "**Explosives**: None\n\n"
+            
+        # Add abilities info
+        if creature.abilties:
+            markdown_output += "### Abilities\n"
+            for ability in creature.abilties:
+                markdown_output += f"**{ability.name}** ({ability.type}, {ability.points} points)\n"
+                markdown_output += f"{ability.description}\n\n"
+        else:
+            markdown_output += "### Abilities\nNone\n"
         
-        with col5:
-            st.subheader("Abilities")
-            if creature.abilties:
-                for ability in creature.abilties:
-                    st.write(f"- {ability.name}: {ability.description} (Type: {ability.type}, Points: {ability.points})")
-            else:
-                st.write("No abilities")
+        # Display the formatted output in a text box
+        st.subheader("Formatted Creature Stats")
+        st.text_area("Creature Statistics", markdown_output, height=600)
