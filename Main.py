@@ -16,7 +16,8 @@ firearms_df = pd.read_csv(r"Data\Firearms.tsv", sep="\t")
 explosives_df = pd.read_csv(r"Data\Explosives.tsv", sep="\t")
 weapons_df_list = [melee_df, projectile_df, firearms_df]
 
-# Helper functions for dropdowns
+# ------------------------------ Helper functions for dropdowns ----------------------------- # 
+
 def get_armor_options():
     return {f"{row['name']} (AC: {row['AC']})": row['id'] for _, row in armor_df.iterrows()}
 
@@ -38,7 +39,10 @@ def get_explosive_options():
 def get_ability_options():
     return {f"{row['name']} (Type: {row['type']}, Points: {row['points']})": row['id'] for _, row in abilities_df.iterrows()}
 
-# Streamlit App
+
+
+
+# ----------------------------------------  Streamlit App Start ------------------------- #
 st.title("Creature Creator")
 
 st.header("Create New Creature")
@@ -73,6 +77,9 @@ with st.form("creature_form"):
         num_attacks = st.number_input("Number of Attacks", 1, 5, 1)
         focus_points = st.number_input("FP", 0, 10, 0)
     
+
+    # ----------------------- Attributes ------------------ #
+
     with col2:
         st.subheader("Attributes")
         brawn = st.number_input("Brawn", -5, 10, 0)
@@ -80,6 +87,8 @@ with st.form("creature_form"):
         brains = st.number_input("Brains", -5, 10, 0)
         mettle = st.number_input("Mettle", -5, 10, 0)
         
+
+        # ----------------------- Equipment ------------------ #
         st.subheader("Equipment")
         armor_options = get_armor_options()
         selected_armor = st.selectbox("Armor", ["None"] + list(armor_options.keys()))
