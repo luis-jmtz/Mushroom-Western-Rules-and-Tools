@@ -3,12 +3,11 @@ import numpy as np
 from equipment import *
 from creatures import *
 from abilities import *
-
-import pprint
 import streamlit as st
 
 # Load data to get accurate names lists 
 abilities_df = pd.read_csv(r"Data\Creature_abilities.tsv", sep="\t")
+creature_types = pd.read_csv(r"Data\creature_types.tsv", sep="\t")
 armor_df = pd.read_csv(r"Data\Armor.tsv", sep="\t")
 shields_df = pd.read_csv(r"Data\Shields.tsv", sep="\t")
 melee_df = pd.read_csv(r"Data\Melee.tsv", sep="\t")
@@ -50,6 +49,13 @@ with st.form("creature_form"):
     with col1:
         st.subheader("Basic Information")
         creature_name = st.text_input("Creature Name", "Unnamed Creature")
+
+
+        chosen_creature_type = st.selectbox(
+            "Creature Type",
+            creature_types["name"]
+        )
+
         level = st.number_input("Level", 0, 20, 1)
         size = st.selectbox("Size", 
                            ["Small (-1)", "Medium (0)", "Large (1)", "Huge (2)"],
@@ -179,7 +185,7 @@ with st.form("creature_form"):
             basic_info.append("**Burrow**: Yes")
         
         if basic_info:
-            markdown_output += "### Basic Information\n" + "  \n".join(basic_info) + "\n\n"
+            markdown_output +=  "  \n".join(basic_info) + f", {chosen_creature_type}\n\n"
         
         # Attributes Table
         markdown_output += "### Attributes\n"
