@@ -1,1 +1,11 @@
 genotype_id	trait_id	isCore	description
+0	0	0	0
+1	1	1	Size: Medium
+1	2	1	Speed: 6
+1	3	1	Attribute Increase: Choose an Attribute. The chosen Attribute increases by 1 (up to the Attribute Limit).
+1	4	1	Human Resolve: Your Life is increased by 1.
+1	5	1	Flexibility: You gain 1 additional Skill Point during Character Creation.
+1	6	0	Quick Learner: You gain 1 Skill Point.
+1	7	0	Persistent: The penalties from the Exhaustion condition are reduced by 1.
+1	8	0	Just Lucky I Guess: A number of times equal to your Combat Proficiency, you can reroll a die and take the preferred result. You regain all expended uses at the beginning of each session.
+1	9	0	Feat: You gain 1 Feat.
