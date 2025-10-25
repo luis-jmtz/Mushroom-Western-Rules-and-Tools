@@ -10,5 +10,8 @@ genotype_id	trait_id	isCore	description	points	notes
 2	10	1	Tough: Your HP max is increases by 1	0.1	-
 2	11	1	Toxic Fortitude: You have Poison Resistance (Half) and ADV on Saves against being Poinsed.	0.1	low bonus because of limited use
 2	12	1	Iron Stomach: You have ADV on Saves against effects that come from consuming food or liquids.	0	too niche to be consistently helpful
-2	13	0	Thick-Skinned: Your AC incres by 1 while not wearing Heavy Armor.
-2
+2	13	0	Thick-Skinned: Your AC incres by 1 while not wearing Heavy Armor.	0.1	based on AC score calculation
+2	14	0	Thick-Bearded: You are immune to airborne effects that would deal poison damage or impose the Poisoned condition.	0.1	niche but does provide an immunity
+2	15	0	Dense: You have ADV on any Checks or Saves to avoid being forcibly moved	0.2	very useful the setting has a lot of ranged combat
+2	16	0	Cave Diver: You have Darkvision up to 4 Spaces.	0.1	good utility but not common in combat
+2	17	0	 Minor Tremorsens: You have Tremorsense up to 2 Spaces	0.2	good against stealthy enemies and blinded condition
