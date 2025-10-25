@@ -1,22 +1,21 @@
 id	name	description	type	points
 0	none	none	0	0
 1	Weapon Styles	This creature has access to Weapon Styles	1	0.2
-2	Bastard's Focus	"This creature regains half of its FP when it:
+2	(Lesser) Bastard's Focus	"This creature regains half of its FP when it:
 - Hits a Flanked target.
 - Hits a target affected by a Condition."	0	1
 3	Debilitating Strike	When this creatures has ADV on an Attack, it can spend 1 FP to force the target to make a Physical Save against its Save DC. On a failure, the target suffers 1 of the following effects until the start of the next turn: Exposed, Hindered, Slowed 1. A target can't be affected by the same option more than once at a time.	0	1
 4	Cheap Shot	This creatures deals +1 damage on Attacks against creatures that are flanked or subjected to at least 1 Condition	1	0.2
 5	Uncanny Dodge	When this creature is forced to make a Physical Save, it can move up to half of its Speed without provoking an Attack of Opportunity	2	0.5
 6	Backstab	Creatures that cannot see this creature have DIS on their saves against its Debilitating Strike	1	0.2
-7	Improved Debilitating Strike	When landing a successful Debilitating Strike against a creature, this creature does an additional point of damage.	1	0.2
 8	Cheap Shot	This creature deals +1 damage on Attacks against creatures with 2 or more conditions 	1	0.2
 9	Taunting Shot	On a successful Attack, this creature can spend 1 FP to force the target to make a Mettle save. On a failure, the target is Taunted until the end of this creature's next turn	0	0.2
 10	Riposte	When a creature within this creature's Melee Range misses it with an Attack, it provokes an Attack of Opportunity from this creature.	1	0.2
-11	Drifter's Focus	This creature regains half of its FP when it performs 1 or more Maneuvers as part of an Action, provided it did not expend FP as part of that action	0	1
+11	(Lesser) Drifter's Focus	This creature regains half of its FP when it performs 1 or more Maneuvers as part of an Action, provided it did not expend FP as part of that action	0	1
 12	Second Wind	Once per day, this creature can spend 1 AP to regain a number of HP equal to its Combat Proficiency	2	1
 13	Pierce Through	Whenever this creature lands a Heavy Hit with a weapon Attack, it ignores the target's Physical damage Resistances (unless the target is immune to the damage)	1	0.3
 14	Holdfast	This creature has ADV on checks or Saves to be moved against its will	2	0.2
-15	Hunter's Focus	"This creature regains half of its FP when:
+15	(Lesser) Hunter's Focus	"This creature regains half of its FP when:
 - It rolls Perception and spots a Hidden creature
 
 "	0	1
