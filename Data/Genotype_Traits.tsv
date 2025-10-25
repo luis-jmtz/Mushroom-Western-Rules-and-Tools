@@ -7,3 +7,8 @@ genotype_id	trait_id	isCore	description	points	notes
 1	7	0	Persistent: The penalties from the Exhaustion condition are reduced by 1.	0.5	Pretty strong doesn't always come up
 1	8	0	Just Lucky I Guess: A number of times equal to your Combat Proficiency, you can reroll a die and take the preferred result. You regain all expended uses at the beginning of each session.	1	Very powerful and gets more powerful as you level up
 1	9	0	Feat: You gain 1 Feat.	0	Points will be calculated from individual feats
+2	10	1	Tough: Your HP max is increases by 1	0.1	-
+2	11	1	Toxic Fortitude: You have Poison Resistance (Half) and ADV on Saves against being Poinsed.	0.1	low bonus because of limited use
+2	12	1	Iron Stomach: You have ADV on Saves against effects that come from consuming food or liquids.	0	too niche to be consistently helpful
+2	13	0	Thick-Skinned: Your AC incres by 1 while not wearing Heavy Armor.
+2
