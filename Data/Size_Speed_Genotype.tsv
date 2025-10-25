@@ -3,4 +3,4 @@ genotype_id	size	speed	name
 1	0	6	Human
 2	0	5	Molemen
 3	0	6	Hulks
-4	1	5	Scuttlers
+4	-1	5	Scuttlers
