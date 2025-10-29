@@ -25,6 +25,7 @@ class Creature:
         self.base_speed = 6 # base speed for medium creatures = 30 ft
         self.canFly = False
         self.canBurrow = False
+        self.canClimb = False
         self.ap = 2 #min 2 AP
         self.num_attacks = 1 # number of normal attacks
         self.focus_points = 0
@@ -236,7 +237,11 @@ class Creature:
             (total_attributes * 0.2)
         )
         
-        # Ensure minimum difficulty
-        # total_difficulty = max(1, total_difficulty)
+        if self.canFly:
+            total_difficulty += 1
+        if self.canBurrow:
+            total_difficulty += 0.5
+        if self.canClimb:
+            total_difficulty += 0.3
         
         return total_difficulty
