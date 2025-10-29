@@ -15,3 +15,17 @@ genotype_id	trait_id	isCore	description	points	notes
 2	15	0	Dense: You have ADV on any Checks or Saves to avoid being forcibly moved	0.2	very useful the setting has a lot of ranged combat
 2	16	0	Cave Diver: You have Darkvision up to 4 Spaces.	0.1	good utility but not common in combat
 2	17	0	 Minor Tremorsens: You have Tremorsense up to 2 Spaces	0.2	good against stealthy enemies and blinded condition
+3	18	1	Powerful Build: You count as 1 size larger for the purpose of Athletic checks (this includes Physical Checks).	.1	-
+3	19	1	Thick Skin: You gain 1 Damage Reduction againt Physical Damage.	0.3	powerful but less so as you level up
+3	20	1	Mighty Leap: You can use your Brawn instead of Reflex to detemine your Jump Distance and the damage you take from falling.	0.1	-
+3	21	0	Dense: You have ADV on any Checks or Saves to avoid being forcibly moved	0.2	very useful the setting has a lot of ranged combat
+3	22	0	Unstoppable: You have ADV on Saves against being Slowed or Stunned	0.2	-
+3	23	0	Stamina Increase: You gain 1 additional FP.	0.3	-
+3	24	0	Rock Thrower: When you throw a rock as an attack, you add your Combat Proficiency to the attack roll. The rock has the following properties: 1B, Impact, Thrown (4/8).	.1	basically just another weapon
+4	25	1	Small Form:\n- You have ADV on saves against traps\n- When you use a weapon with the Loading property, the AP required is increased by 1.\n- Your Speed is reduced by 1 when wielding a Heavy Shield.\n- A day's ration (as described in the rule) instead lasts 2 days for you and you require less water to survive.	.3	-
+4	26	1	Elusive: When you take the Disengage Action, you instead gain the benefit of the Full Disengage Action.	.2	powerful damge avoidance
+4	27	1	Fleet of Foot: You have ADV on Initiative rolls. The second time you take the Move Action in a round of combat, your Speed is not halved.	.3	very useful
+4	28	0	Light Body: You take 1 less falling damage.	0.1	-
+4	29	0	Fight-or-Fight: Once per day, you can end the Intimated or Frightened Condition on yourself for free at any time.
+4	30	0	Deft Form: You gain Expertise with Sleight of Hand.	0	-
+4	31	0	Natural Climber: You gain a climb Speed equal to your Speed.	0	-
