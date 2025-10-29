@@ -27,5 +27,6 @@ genotype_id	trait_id	isCore	description	points	notes
 4	27	1	Fleet of Foot: You have ADV on Initiative rolls. The second time you take the Move Action in a round of combat, your Speed is not halved.	.3	very useful
 4	28	0	Light Body: You take 1 less falling damage.	0.1	-
 4	29	0	Fight-or-Fight: Once per day, you can end the Intimated or Frightened Condition on yourself for free at any time.
-4	30	0	Deft Form: You gain Expertise with Sleight of Hand.	0	-
-4	31	0	Natural Climber: You gain a climb Speed equal to your Speed.	0	-
+4	30	0	Deft Form: You gain Expertise with Sleight of Hand.	0	Not useful in combat
+4	31	0	Natural Climber: You gain a climb Speed equal to your Speed.	0.3	-
+4	32	0	Scurry: When an Attack of Opportunity misses you, you can move 1 more space without provoking any Attacks of Opportunity.	0.3	-
