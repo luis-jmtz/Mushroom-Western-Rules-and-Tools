@@ -4,10 +4,10 @@ import pandas as pd
 # load data
 size_speed = pd.read_csv(r"Data\Size_Speed_Genotype.tsv", sep="\t")
 geno_traits =  pd.read_csv(r"Data\Genotype_Traits.tsv", sep="\t", escapechar='\\')
+sizes = pd.read_csv(r"Data\size_list.csv", header=None).iloc[0].tolist() # loads in the sizes which is single line csv
 
 geno_traits["description"] = geno_traits["description"].str.replace(r'\\n', '\n', regex=True) #ensures new-line characters are read correclty
 
-# Size List: Used for converting numerical size value to text
 
 # defines the tabs that will be presented and used
 tab_labels = []
@@ -31,8 +31,11 @@ for i, tab in enumerate(tabs):
 
         ss_row = size_speed[size_speed["genotype_id"] == i+1] # size, speed row
 
-        st.write(ss_row)
-        
+        geno_size = ss_row["size"].iloc[0]
+        geno_speed = str(ss_row["speed"].iloc[0])
+
+        st.write("Size: "+ sizes[geno_size])
+        st.write("Speed: " + geno_speed)
 
 
         for index, row in geno_traits.iterrows():
