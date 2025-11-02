@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 
+
 # load data
 size_speed = pd.read_csv(r"Data\Size_Speed_Genotype.tsv", sep="\t")
 geno_traits =  pd.read_csv(r"Data\Genotype_Traits.tsv", sep="\t", escapechar='\\')
 sizes = pd.read_csv(r"Data\size_list.csv", header=None).iloc[0].tolist() # loads in the sizes which is single line csv
 
 geno_traits["description"] = geno_traits["description"].str.replace(r'\\n', '\n', regex=True) #ensures new-line characters are read correclty
-
 
 # defines the tabs that will be presented and used
 tab_labels = []
