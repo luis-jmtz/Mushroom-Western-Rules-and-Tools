@@ -68,17 +68,55 @@ class player_character(Creature):
 
 test = player_character()
 
-test.core_genotype = 4
+# test.core_genotype = 4
 test.init_core_traits()
 
+test.pc_class = st.number_input("Class genotype", 0,5,step=1)
+test.init_class_abilities()
+
+test.core_genotype = st.number_input("core genotype", 0,4,step=1)
+test.init_core_traits()
+
+test.second_genotype = st.number_input("secondary genotype", 0,4,step=1)
 
 
+
+# for attr_name in dir(test):
+#     if not attr_name.startswith('__'):
+#         attr_value = getattr(test, attr_name)
+#         if not callable(attr_value):  # Skip methods/functions
+#             if attr_name == 'skills':
+#                 st.subheader("Skills")
+#                 st.dataframe(attr_value)
+#             else:
+#                 st.write(f"**{attr_name}:** {attr_value}")
+
+# Get all variables
+variables = {}
 for attr_name in dir(test):
     if not attr_name.startswith('__'):
         attr_value = getattr(test, attr_name)
-        if not callable(attr_value):  # Skip methods/functions
-            if attr_name == 'skills':
-                st.subheader("Skills")
-                st.dataframe(attr_value)
-            else:
-                st.write(f"**{attr_name}:** {attr_value}")
+        if not callable(attr_value) and attr_name != 'skills':
+            variables[attr_name] = attr_value
+
+# Split into 3 columns
+col1, col2, col3 = st.columns(3)
+
+# Distribute variables across columns
+var_items = list(variables.items())
+items_per_col = len(var_items) // 3
+
+for i, (key, value) in enumerate(var_items):
+    if i < items_per_col:
+        with col1:
+            st.write(f"**{key}:** {value}")
+    elif i < items_per_col * 2:
+        with col2:
+            st.write(f"**{key}:** {value}")
+    else:
+        with col3:
+            st.write(f"**{key}:** {value}")
+
+# Skills at the bottom
+st.subheader("Skills")
+st.dataframe(test.skills)
