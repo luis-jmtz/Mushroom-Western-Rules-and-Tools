@@ -1,7 +1,10 @@
 # class that inherits creatures class to build player characters
 from creatures import Creature
 import streamlit as st
+import pandas as pd
 
+#load skills data
+# skills = pd.read_csv(r"Data\Player_Specific_Data\Skills.tsv", sep="\t")
 
 class player_character(Creature):
     
@@ -12,7 +15,7 @@ class player_character(Creature):
         self.core_genotype = 0  # player genotypes id
         self.second_genotype = 0
         self.skill_points = 0
-        self.skills = []  # skill proficiency data
+        self.skills = pd.read_csv(r"Data\Player_Specific_Data\Skills.tsv", sep="\t")
         self.save_proficiencies = []  # list of attributes with save proficiency
         self.feats = []  # list of feats the character has
         self.additional_attribute_points = 2
@@ -68,12 +71,14 @@ test = player_character()
 test.core_genotype = 4
 test.init_core_traits()
 
-# for key, value in vars(test).items():
-#     print(f"{key}: {value} ({type(value).__name__})")
 
 
 for attr_name in dir(test):
     if not attr_name.startswith('__'):
         attr_value = getattr(test, attr_name)
         if not callable(attr_value):  # Skip methods/functions
-            st.write(f"**{attr_name}:** {attr_value}")
+            if attr_name == 'skills':
+                st.subheader("Skills")
+                st.dataframe(attr_value)
+            else:
+                st.write(f"**{attr_name}:** {attr_value}")
