@@ -1,5 +1,6 @@
 # class that inherits creatures class to build player characters
 from creatures import Creature
+import streamlit as st
 
 
 class player_character(Creature):
@@ -20,6 +21,8 @@ class player_character(Creature):
         self.level = 1
 
         self.calc_bonuses()
+        self.init_core_traits()
+        self.calc_skill_points()
 
     
     def calc_skill_points(self):
@@ -56,5 +59,21 @@ class player_character(Creature):
         pass
 
 
-    def calc_values(self):
 
+
+# Test Area
+
+test = player_character()
+
+test.core_genotype = 4
+test.init_core_traits()
+
+# for key, value in vars(test).items():
+#     print(f"{key}: {value} ({type(value).__name__})")
+
+
+for attr_name in dir(test):
+    if not attr_name.startswith('__'):
+        attr_value = getattr(test, attr_name)
+        if not callable(attr_value):  # Skip methods/functions
+            st.write(f"**{attr_name}:** {attr_value}")
