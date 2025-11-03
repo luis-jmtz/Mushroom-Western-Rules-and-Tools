@@ -5,19 +5,19 @@ import load_lvl1_features as lvl1
 st.title("Mushroom Western Character Creator")
 
 # -------------------- Load Data ----------------- #
-st.session_state.genotypes = pd.read_csv(r"Data\charater_creation_data\Genotype.tsv", sep="\t")
+st.session_state.genotypes = pd.read_csv(r"Data\Genotype.tsv", sep="\t")
 genotypes = st.session_state.genotypes
 
-st.session_state.traits = pd.read_csv(r"Data\charater_creation_data\Traits.tsv", sep="\t")
+st.session_state.traits = pd.read_csv(r"Data\Traits.tsv", sep="\t")
 traits =  st.session_state.traits
 
-# st.session_state.traits = pd.read_csv(r"Data\Traits.tsv", sep="\t")
-# traits = st.session_state.traits
+st.session_state.traits = pd.read_csv(r"Data\Traits.tsv", sep="\t")
+traits = st.session_state.traits
 
-st.session_state.classes = pd.read_csv(r"Data\charater_creation_data\Class_List.tsv", sep="\t")
+st.session_state.classes = pd.read_csv(r"Data\Class_List.tsv", sep="\t")
 classes = st.session_state.classes
 
-st.session_state.skills = pd.read_csv(r"Data\charater_creation_data\Skills.tsv", sep="\t")
+st.session_state.skills = pd.read_csv(r"Data\Skills.tsv", sep="\t")
 skills = st.session_state.skills
 
 #  ---------------- Choosing Ancestry ----------------- #

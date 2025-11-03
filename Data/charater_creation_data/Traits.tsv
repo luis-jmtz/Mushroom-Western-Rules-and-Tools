@@ -1,0 +1,29 @@
+id	name	isCore	description
+1	Tough	1	You HP max increases by 1
+2	Toxic Fortitude	1	You have Poison Resistance (Half) and ADV on Saves against being Poisoned
+3	Iron Stomach	1	You have ADV on Saves against effects that come from consuming foods or liquids
+4	Thick-Skinned	0	Your AC increases by 1 while you're not wearing Heavy Armor
+5	Thick-Bearded	0	You are immune to airborne effects that would deal poison damage or impose the Poisoned condition
+6	Dense	0	You have ADV on any Checks or Saves to avoid being forcibly moved
+7	Cave Diver	0	You have Darkvision up to 4 Spaces
+8	Minor Tremorsense	0	You have Tremorsense up 2 to Spaces
+9	Attribute Increase	1	Choose an Attribute. The chosen Attribute increases by 1 (up your Attribute Limit)
+10	Human Resolve	1	Your Life is increased by 1
+11	Flexibility	1	You gain 1 additional Skill Point during Character Creation
+12	Quick Learner	0	You gain 1 Skill Point
+13	Persistent	0	The penalties from the Exhaustion condition are reduced by 1.
+14	Just Lucky I Guess	0	 A number of times equal to Combat Proficiency, you can reroll a die and take the preferred result. You regain all expended uses at the beginning of each session.
+15	Feat	0	You gain one feat
+16	Small Form	1	- You have ADV on saves against traps - When you use a weapon with the loading property, the AP is increased by 1 - Your Speed is reduced by 1 when wielding a Heavy Shield - A day's ration instead lasts 2 days for you and you require less water to survive
+17	Elusive	1	When you take the Disengage Action, you instead gain the benefit of a the Full Disengage Action
+18	Fleet of Foot	1	You have ADV on Initiative rolls. The second time you take the Move Action in a round of combat, your Speed is not halved
+19	Light Body	0	You take 1 less falling damage
+20	Fight-or-Flight	0	Once per day, you can end the Intimated or Frightened Condition on yourself for free at anytime
+21	Deft Form	0	You gain Expertise with Sleight of Hand
+22	Natural Climber	0	You gain a Climb Speed equal to your Speed
+23	Scurry	0	When an Attack of Opportunity misses you, you can move 1 more space without provoking anymore Attacks of Opportunity
+24	Powerful Build	1	You count as 1 size Larger for the purpose of Athletic Checks.
+25	Mighty Leap	1	You can use your Brawn instead of Reflex to determine your Jump Distance and the damage you take from Falling.
+26	Unstoppable	0	You have ADV on Saves against being Slowed or Stunned.
+27	Stamina Increase	0	Your FP maximum increases by 1.
+28	Rock Thrower	0	When you throw a rock as an attack, you add your Combat Proficiency to the attack roll. The rock has the following properties: 1B, Impact, Thrown (4/8) .

@@ -1,0 +1,5 @@
+id	name	description
+1	Thuggish Focus	When you score a Heavy or Critical Hit against a creature OR if either is scored against you, you regain half of your FP, if you didn't spend FP as part of the action.
+2	Rage	During Combat, you can spend 1 AP and 1 FP to enter a Rage for 1 minute. For the duration, you're subjected to the following effects: - You deal +1 damage on Melee Attacks. - You have ADV on Brawn Checks and Saves. - Your AC decreases by 5. - You gain Resistance(1/2) to Physical Damage. Your Rage ends early if you fall Unconscious, die, or you choose to end it for free on your turn.
+3	Unarmored Warrior	- You gain access to the following AC formula when not wearing Armor: 8 + Combat Proficiency + (Reflex or Brawn) + 2 - While not wearing Armor, you have +1 Speed
+4	Aggressive Striker	- Charge: When you make a Melee Attack on your turn, you can move up to 2 Spaces immediately before making the Attack. - Mighty Leap: You can use your Brawn instead of Reflex to determine your Jump Distance and the damage you take from Falling.
