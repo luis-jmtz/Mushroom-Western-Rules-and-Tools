@@ -1,7 +1,7 @@
 import streamlit as st
 from pathlib import Path
 
-folder_path = Path(r"Data\Player_Classes")
+folder_path = Path(r"Data\Player_Classes_Text")
 class_names = [f.stem for f in folder_path.glob("*.md")]
 class_data = [f.read_text() for f in folder_path.glob("*.md")]
 
