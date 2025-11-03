@@ -47,7 +47,7 @@ class Creature:
 
 
     def calc_prime(self):
-        self.prime = max([self.brawn, self.reflex, self.brains, self.mettle])
+        self.prime += max([self.brawn, self.reflex, self.brains, self.mettle])
 
     def calc_bonuses(self):
         self.calc_prime()
