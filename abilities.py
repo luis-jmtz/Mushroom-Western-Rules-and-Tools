@@ -2,6 +2,8 @@ import pandas as pd
 
 # load data
 abilities = pd.read_csv(r"Data\Creature_abilities.tsv", sep="\t")
+abilities["description"] = abilities["description"].str.replace(r'\\n', '\n', regex=True) #ensures new-line characters are read correclty
+
 
 class Ability:
     def __init__(self,id):
