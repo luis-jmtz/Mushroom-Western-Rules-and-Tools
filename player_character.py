@@ -20,6 +20,7 @@ class player_character(Creature):
         self.feats = []  # list of feats the character has
         self.additional_attribute_points = 2
         self.life = 0 # life - when you run out of luck
+        self.focus_points = 1
 
         self.level = 1
 
